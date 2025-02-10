@@ -20,6 +20,7 @@ import SG from './assets/sg.jpg';
 import KI from './assets/KI.jpg';
 import Injustice from './assets/injustice.jpg';
 import DS from './assets/DS.jpg';
+import { Outlet } from 'react-router-dom';
 
 
 function App() {
@@ -33,13 +34,13 @@ function App() {
 
 
 
-
+<Outlet />
       <div className={styles.gridContainer}>
         <Card title={"Guilty Gear"} description={"A fast-paced anime fighting game with unique characters and deep mechanics."} imageSrc={GG} />
         <Card title={"Tekken"} description={"A 3D fighting game known for its deep combat system and diverse character roster."} imageSrc={Tekken} />
         <Card title={"Street Fighter"} description={"A classic 2D fighting game series with iconic characters and competitive gameplay."} imageSrc={StreetFighter} />
         <Card title={"Mortal Kombat"} description={"A brutal fighting game famous for its violent fatalities and dark storyline."} imageSrc={MortalKombat} />
-         <Card title={"Dragon Ball FighterZ"} description={"A visually stunning 2D fighter featuring characters from the Dragon Ball series."} imageSrc={DBFZ} />
+        <Card title={"Dragon Ball FighterZ"} description={"A visually stunning 2D fighter featuring characters from the Dragon Ball series."} imageSrc={DBFZ} />
         <Card title={"Super Smash Bros"} description={"A crossover fighting game with characters from various Nintendo franchises."} imageSrc={Smash} />
         <Card title={"Dead or Alive"} description={"A 3D fighting game known for its fast-paced combat and interactive stages."} imageSrc={DOA} />
         <Card title={"Soul Calibur"} description={"A weapon-based 3D fighting game with a rich story and diverse characters."} imageSrc={SoulCalibur} />
