@@ -1,18 +1,21 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import Card from './card';
+import { useParams, useOutletContext } from 'react-router-dom';
+
 
 const GamePage = () => {
-
-const params = useParams();   
+const { gData } = useOutletContext();
+const params = useParams();    
+const data = gData.map((game) => game.props.children.props);
+console.log(data)
+const realData = data.find((game) => game.title === params.title);
 return (
         <>
         
         <div className="gamePage">
-            <img src={image} alt={title} className="gameImage" />
-            <h1 className="gameTitle">{params.title}</h1>
-            <p className="gameDescription">{description}</p>
-            <p className="gamePrice">${price}</p>
+            <img src={realData.imageSrc} alt={"title"} className="gameImage" />
+            <h1 className="gameTitle">{realData.title}</h1>
+            <p className="gameDescription">{realData.description}</p>
+            {/* <p className="gamePrice">${price}</p> */}
         </div>
         </>
     );

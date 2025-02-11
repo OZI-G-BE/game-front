@@ -15,15 +15,10 @@ function App() {
 
   return (
     <>
-
-
-    <Navbar />
-
-
-
-<Outlet />
+      <Navbar />
+      <Outlet context={{ gData }} />
       <div className={styles.gridContainer}>
-{gData}
+        {gData}
       </div>
     </>
   )
