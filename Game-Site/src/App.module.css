@@ -14,6 +14,7 @@
   justify-content: center;
   place-items: center;
 }
+
 .outletContainer {
   display: flex;
   flex-direction: column;
