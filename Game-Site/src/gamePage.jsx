@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useOutletContext } from 'react-router-dom';
-
+import styles from './gamePage.module.css';
 
 const GamePage = () => {
 const { gData } = useOutletContext();
@@ -11,11 +11,11 @@ const realData = data.find((game) => game.title === params.title);
 return (
         <>
         
-        <div className="gamePage">
-            <img src={realData.imageSrc} alt={"title"} className="gameImage" />
-            <h1 className="gameTitle">{realData.title}</h1>
-            <p className="gameDescription">{realData.description}</p>
-            {/* <p className="gamePrice">${price}</p> */}
+        <div className={styles.gamePage}>
+            <img src={realData.imageSrc} alt={"title"} className={styles.gameImage} />
+            <h1 className={styles.gameTitle}>{realData.title}</h1>
+            <p className={styles.gameDescription}>{realData.description}</p>
+            {/* <p className={styles.gamePrice}>${price}</p> */}
         </div>
         </>
     );

@@ -5,7 +5,7 @@ import Card from './card';
 import { Outlet, NavLink} from 'react-router-dom';
 import gamedata from './gameData.js';
 function App() {
-  const [count, setCount] = useState(0)
+  const [gameActive, setGameActive] = useState(false)
   
   
   const gData = gamedata.map((game) => 
@@ -16,7 +16,9 @@ function App() {
   return (
     <>
       <Navbar />
+    <div className={styles.outletContainer}>
       <Outlet context={{ gData }} />
+      </div>
       <div className={styles.gridContainer}>
         {gData}
       </div>
