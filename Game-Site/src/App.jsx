@@ -6,15 +6,18 @@ import { Outlet, NavLink, Link} from 'react-router-dom';
 import gamedata from './gameData.js';
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
+  const [xActive, setXActive] = useState(styles.gridnone)
 
 
 
   function gameShow(){
     if (gameActive == styles.gridContainer){
       setGameActive(styles.gridnone);
+      setXActive(styles.closeButton);
     }
     else{
       setGameActive(styles.gridContainer);
+      setXActive(styles.gridnone);
     }
   }
   
@@ -32,7 +35,7 @@ function App() {
       <>
       <Navbar />
     <div className={styles.outletContainer} >
-    <Link to="/" className={styles.closeButton} onClick={gameShow}  >X</Link>
+    <Link to="/" className={xActive} onClick={gameShow}  >X</Link>
       <Outlet context={{ gData }} />
       </div>
       <div className={gameActive}>
