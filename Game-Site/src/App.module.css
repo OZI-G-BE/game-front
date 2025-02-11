@@ -27,6 +27,9 @@
 .gridnone{
   animation: fadeOutDown 0.5s ease 0s 1 normal forwards;
 }
+.gridnone{
+  display: none;
+}
 
 
 .outletContainer {
