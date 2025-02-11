@@ -1,25 +1,41 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from './App.module.css';
 import Navbar from './Navbar';
 import Card from './card';
-import { Outlet, NavLink} from 'react-router-dom';
+import { Outlet, NavLink, Link} from 'react-router-dom';
 import gamedata from './gameData.js';
 function App() {
-  const [gameActive, setGameActive] = useState(false)
-  
+  const [gameActive, setGameActive] = useState(styles.gridContainer)
+
+
+
+  function gameShow(){
+    if (gameActive == styles.gridContainer){
+      setGameActive(styles.gridnone);
+    }
+    else{
+      setGameActive(styles.gridContainer);
+    }
+  }
   
   const gData = gamedata.map((game) => 
-    <NavLink  to={`/gamePage/${game.title}`}>
-      <Card title={game.title} description={game.description} imageSrc={game.imagePath} />
-    </NavLink>);
+    <div onClick={gameShow}>
+      <NavLink  to={`/gamePage/${game.title}`}>
+      <Card title={game.title} description={game.description} imageSrc={game.imagePath} >
 
-  return (
-    <>
+      </Card>
+      </NavLink>
+    </div> 
+    );
+    
+    return (
+      <>
       <Navbar />
-    <div className={styles.outletContainer}>
+    <div className={styles.outletContainer} >
+    <Link to="/" className={styles.closeButton} onClick={gameShow}  >X</Link>
       <Outlet context={{ gData }} />
       </div>
-      <div className={styles.gridContainer}>
+      <div className={gameActive}>
         {gData}
       </div>
     </>
