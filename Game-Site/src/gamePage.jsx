@@ -2,10 +2,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Card from './card';
 
-const GamePage = ({ image, title, description, price }) => {
+const GamePage = () => {
 
-const params = useParams();
-console.log(params)    
+const params = useParams();   
 return (
         <>
         

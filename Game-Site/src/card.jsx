@@ -14,7 +14,7 @@ useEffect(() => {
     return (
        <>
        
-       <Link to={`/gamePage/${title}`}>
+       
        
         <div className={styles.card}>
             <img src={imageSrc} alt={title} className={styles.cardImage} />
@@ -23,7 +23,7 @@ useEffect(() => {
                 <p className={styles.cardDescription}>{description}</p>
             </div>
         </div>
-       </Link>
+       
        </>
         
     );
