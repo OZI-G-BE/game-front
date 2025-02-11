@@ -25,15 +25,15 @@ const gamesData = [
         imagePath: GG,
     },
     {
-        title: "Tekken 7",
+        title: "Tekken 8",
         description: "A 3D fighting game known for its deep combat system and diverse character roster.",
-        longDescription: "Tekken 7 is a critically acclaimed 3D fighting game that offers a deep and rewarding combat system. With a diverse roster of characters, each with their own unique fighting styles, players can engage in intense battles and master complex combos. The game also features a cinematic story mode that delves into the Mishima family feud, as well as various online and offline modes.",
+        longDescription: "Tekken 8 is a critically acclaimed 3D fighting game that offers a deep and rewarding combat system. With a diverse roster of characters, each with their own unique fighting styles, players can engage in intense battles and master complex combos. The game also features a cinematic story mode that delves into the Mishima family feud, as well as various online and offline modes.",
         imagePath: Tekken,
     },
     {
-        title: "Street Fighter V",
+        title: "Street Fighter 6",
         description: "A classic 2D fighting game series with iconic characters and competitive gameplay.",
-        longDescription: "Street Fighter V continues the legacy of the iconic Street Fighter series with its classic 2D fighting mechanics and a roster of beloved characters. The game offers a variety of modes, including a story mode, arcade mode, and online multiplayer. Players can hone their skills in training mode and compete in ranked matches to prove their prowess. The game is known for its competitive scene and regular updates.",
+        longDescription: "Street Fighter 6 continues the legacy of the iconic Street Fighter series with its classic 2D fighting mechanics and a roster of beloved characters. The game offers a variety of modes, including a story mode, arcade mode, and online multiplayer. Players can hone their skills in training mode and compete in ranked matches to prove their prowess. The game is known for its competitive scene and regular updates.",
         imagePath: StreetFighter,
     },
     {
@@ -50,7 +50,7 @@ const gamesData = [
     },
     {
         title: "Rivals of Aether",
-        description: "A crossover fighting game with characters from various Nintendo franchises.",
+        description: "A crossover fighting game with characters from various indie franchises.",
         longDescription: "Rivals of Aether is an indie fighting game that features characters inspired by various Nintendo franchises. The game offers a unique combat system that emphasizes movement and positioning. Players can choose from a roster of original characters, each with their own abilities and playstyles. The game includes a story mode, online multiplayer, and a variety of single-player challenges.",
         imagePath: Rivals,
     },

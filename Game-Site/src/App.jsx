@@ -7,7 +7,7 @@ import gamedata from './gameData.js';
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
   const [xActive, setXActive] = useState(styles.gridnone)
-  const [, setGData] = useState([])
+  // const [, setGData] = useState([])
 
 
 
@@ -36,7 +36,7 @@ function App() {
       <>
       <Navbar />
     <div className={styles.outletContainer} >
-    <Link to="/" className={xActive} onClick={gameShow}  >X</Link>
+    <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
       <Outlet context={{ gData }} />
       </div>
       <div className={gameActive}>

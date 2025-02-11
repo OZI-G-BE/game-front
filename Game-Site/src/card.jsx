@@ -23,7 +23,7 @@ useEffect(() => {
                 <p className={styles.cardDescription}>{description}</p>
             </div>
         </div>
-       
+        
        </>
         
     );

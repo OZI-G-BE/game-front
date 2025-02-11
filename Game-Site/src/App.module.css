@@ -17,6 +17,15 @@
 .gridnone{
   display: none;
 }
+.closeButton {
+  position: relative;
+  display: flex;
+  align-items:flex-end;
+  top: 0;
+  right: -500px;
+  padding: 1rem;
+  cursor: pointer;
+}
 
 .gridnone{
   display: none;

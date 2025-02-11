@@ -1,7 +1,7 @@
 import React from 'react';
-import { useParams, useOutletContext, Link } from 'react-router-dom';
+import { useParams, useOutletContext } from 'react-router-dom';
 import styles from './gamePage.module.css';
-import App from './App';
+
 
 const GamePage = () => {
 const { gData } = useOutletContext();
@@ -17,7 +17,7 @@ return (
             <img src={realData.children.props.imageSrc} alt={"title"} className={styles.gameImage} />
             <h1 className={styles.gameTitle}>{realData.children.props.title}</h1>
             <p className={styles.gameDescription}>{realData.children.props.longDescription}</p>
-            {/* <p className={styles.gamePrice}>${price}</p> */}
+            
         </div>
     </>
 );
