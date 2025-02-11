@@ -12,5 +12,5 @@
   gap: 1rem;
   padding-left: auto;
   justify-content: center;
-  align-items: center;
+  place-items: center;
 }
