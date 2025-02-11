@@ -21,6 +21,7 @@
 .gridnone{
   display: none;
 }
+
 .outletContainer {
   display: flex;
   flex-direction: column;
