@@ -15,6 +15,14 @@
   place-items: center;
 }
 
+.gridnone{
+  display: none;
+}
+
+.closeButton{
+display: block;
+}
+
 .outletContainer {
   display: flex;
   flex-direction: column;
