@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './App.module.css';
-import Navbar from './Navbar';
+import Navbar from './Components/Navbar';
 import Card from './card';
 import { Outlet, NavLink} from 'react-router-dom';
 import gamedata from './gameData.js';
