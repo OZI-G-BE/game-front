@@ -16,7 +16,7 @@ return (
             
             <img src={realData.children.props.imageSrc} alt={"title"} className={styles.gameImage} />
             <h1 className={styles.gameTitle}>{realData.children.props.title}</h1>
-            <p className={styles.gameDescription}>{realData.children.props.description}</p>
+            <p className={styles.gameDescription}>{realData.children.props.longDescription}</p>
             {/* <p className={styles.gamePrice}>${price}</p> */}
         </div>
     </>

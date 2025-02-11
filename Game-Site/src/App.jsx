@@ -7,6 +7,7 @@ import gamedata from './gameData.js';
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
   const [xActive, setXActive] = useState(styles.gridnone)
+  const [, setGData] = useState([])
 
 
 
@@ -24,7 +25,7 @@ function App() {
   const gData = gamedata.map((game) => 
     <div onClick={gameShow}>
       <NavLink  to={`/gamePage/${game.title}`}>
-      <Card title={game.title} description={game.description} imageSrc={game.imagePath} >
+      <Card title={game.title} description={game.description} longDescription={game.longDescription} imageSrc={game.imagePath} >
 
       </Card>
       </NavLink>
