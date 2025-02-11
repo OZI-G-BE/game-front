@@ -22,11 +22,13 @@
 }
 
 .cardTitle {
+    font-family: 'Bebas Neue', sans-serif; 
     font-size: 1.5em;
     margin: 0 0 8px 0;
 }
 
 .cardDescription {
+    font-family: 'P-Medium', sans-serif;
     font-size: 1em;
     color: #555;
 }
