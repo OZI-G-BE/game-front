@@ -14,13 +14,12 @@
   justify-content: center;
   place-items: center;
 }
-
 .gridnone{
   display: none;
 }
 
-.closeButton{
-display: block;
+.gridnone{
+  display: none;
 }
 
 .outletContainer {
