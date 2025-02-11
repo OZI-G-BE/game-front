@@ -14,9 +14,6 @@
   justify-content: center;
   place-items: center;
 }
-.gridnone{
-  display: none;
-}
 .closeButton {
   position: relative;
   display: flex;
@@ -25,11 +22,12 @@
   right: -500px;
   padding: 1rem;
   cursor: pointer;
+  opacity: 100%;
+}
+.gridnone{
+  animation: fadeOutDown 0.5s ease 0s 1 normal forwards;
 }
 
-.gridnone{
-  display: none;
-}
 
 .outletContainer {
   display: flex;
@@ -41,8 +39,36 @@
   position: absolute;
   left: 25%;
   top: 25%;
+
+
 }
 
 .outletContainerOff {
-  display: none;
-} 
+animation: fadeOutDown 1s ease 0s 1 normal forwards;
+}  
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 100%;
+    transform: translateY(0);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding-left: auto;
+  justify-content: center;
+  place-items: center;
+    
+  }
+  100% {
+    opacity: 0%;
+    transform: translateY(100%);
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding-left: auto;
+  justify-content: center;
+  place-items: center;
+  }
+}
