@@ -1,20 +1,23 @@
-
-
 footer{
-    width: 100%; 
+    max-width: 100%; 
     padding: 20px;
     background-color: hsl(244, 100%, 20%);
     margin-top: 50px;
 }
 
 .footerContainer{
-    width: max(800px, 90%);
+    width: min(800px, 90%);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(aut0-fill, 1fr);
     justify-content: center;
     align-content: center;
+    row-gap: 4rem;
     margin: 0 auto;
-    justify-items: center;
+
+}
+
+.details{
+    width: 300px;
 }
 
 .footHead{
@@ -43,6 +46,14 @@ footer{
 .footList li a{
     text-decoration: none;
     color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footList li a:hover{
+    color: #ffffff;
+    background-color: #FFA31D;
+    padding: 15px 10px;
+    border-radius: 8px;
 }
 
 .footnote{
