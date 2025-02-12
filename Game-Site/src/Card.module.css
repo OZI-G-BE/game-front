@@ -22,7 +22,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), #FFA31D, #FF8B01, #FA6F01, #F55301, #F03801, #EB1C01, #E60001, #FFA31D);
+    background-image: conic-gradient(from var(--angle) at 50% 70%, #FFA31D, #FF8B01, #FA6F01, #F55301, #F03801, #EB1C01, #E60001, #FFA31D);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
