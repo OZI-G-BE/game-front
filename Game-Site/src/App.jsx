@@ -50,6 +50,7 @@ function App() {
     <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
       <Outlet context={{ gData }} />
       </div>
+      <h1>THE ONE STOP DESTINATION FOR THE CURRENT TITANS OF<br></br> THE FIGHTING GAME WORLD</h1>
       <div className={gameActive}>
         {gData}
       </div>

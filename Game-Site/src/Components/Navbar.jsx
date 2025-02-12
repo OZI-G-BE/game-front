@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from './Navbar.module.css';
+import { Link } from "react-router-dom";
 
 
 function Navbar(){
@@ -21,9 +22,7 @@ function Navbar(){
                 </button>
                 <div className={styles.navLinks}>
                     <a href="/">Home</a>
-                    <a href="/">About Us</a>
-                    <a href="/">Blog</a>
-                    <a href="/">About Us</a>
+                    <Link to="/AboutUs">About Us</Link>
                 </div>
             </nav>
             <div ref={navRef} className={styles.vertNavLinks}>

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import GamePage from './gamePage.jsx'
+import AboutUs from './about.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
           element: <GamePage />,
         },
       ],
+  },
+  {
+    path: '/AboutUs',
+    element: <AboutUs />,
   },
   
  
