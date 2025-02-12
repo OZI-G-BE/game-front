@@ -15,10 +15,10 @@ function Navbar(){
             <nav ref={navRef}>
                 <h1>GAME_OVER</h1>
                 <div className={styles.navLinks}>
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Blog</a>
-                    <a href="#">About Us</a>
+                    <a href="/">Home</a>
+                    <a href="/">About Us</a>
+                    <a href="/">Blog</a>
+                    <a href="/">About Us</a>
                     <button className={`${styles.navBtn} ${styles.navOpenBtn}`} onClick={showNavbar}>
                         <FaBars />
                     </button>

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import {  useState } from 'react'
 import styles from './App.module.css';
 import Navbar from './Components/Navbar';
 import Card from './card';
@@ -7,18 +7,18 @@ import gamedata from './gameData.js';
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
   const [xActive, setXActive] = useState(styles.xnone)
-  // const [, setGData] = useState([])
-
-
+ 
 
   function gameShow(){
     if (gameActive == styles.gridContainer){
       setGameActive(styles.gridnone);
       setXActive(styles.closeButton);
+    
     }
     else{
       setGameActive(styles.gridContainer);
       setXActive(styles.xnone);
+      
     }
   }
   
@@ -42,7 +42,7 @@ function App() {
     
     return (
       <>
-      <Navbar />
+      <Navbar/>
     <div className={styles.outletContainer} >
     <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
       <Outlet context={{ gData }} />
