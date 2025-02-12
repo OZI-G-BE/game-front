@@ -16,7 +16,7 @@ function Navbar(){
     return(
         <header>
             <nav>
-                <h1 className={styles.navLogo}>GAME_OVER</h1>
+                <h1 className={styles.navLogo}>K_OVER</h1>
                 <button className={`${styles.navBtn} ${styles.navOpenBtn}`} onClick={showNavbar}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </button>
