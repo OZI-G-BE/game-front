@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.aboutContainer{
+    flex: 1 0 auto;
+}
+
 .para{
     display: flex;
     align-items: center;

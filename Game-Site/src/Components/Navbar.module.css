@@ -1,5 +1,6 @@
 header{
     margin-bottom: 20px;
+    width: 100%;
 }
 
 nav{
@@ -86,7 +87,7 @@ nav{
 
 @media screen and (max-width: 768px){
     nav{
-        padding: 20px;
+        padding: 20px 40px;
     }
 
     .navOpenBtn{
