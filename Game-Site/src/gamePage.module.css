@@ -29,7 +29,7 @@
     color: #ffffff;
     overflow:visible;
 }
-ul {
+.gameInfo {
     list-style-type: none;
     padding: 0;
     margin: 0;

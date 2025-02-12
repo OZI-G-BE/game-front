@@ -28,8 +28,6 @@ function Navbar(){
             <div ref={navRef} className={styles.vertNavLinks}>
                     <a href="/">Home</a>
                     <a href="/">About Us</a>
-                    <a href="/">Blog</a>
-                    <a href="/">About Us</a>
                 </div>
         </header>
     );
