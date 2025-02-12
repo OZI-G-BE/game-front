@@ -1,6 +1,7 @@
 import {  useState } from 'react'
 import styles from './App.module.css';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer.jsx';
 import Card from './card';
 import { Outlet, NavLink, Link} from 'react-router-dom';
 import gamedata from './gameData.js';
@@ -46,14 +47,15 @@ function App() {
     return (
       <>
       <Navbar/>
-    <div className={bodActive} >
-    <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
-      <Outlet context={{ gData }} />
+      <div className={bodActive} >
+        <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
+        <Outlet context={{ gData }} />
       </div>
       <h1>THE ONE STOP DESTINATION FOR THE CURRENT TITANS OF<br></br> THE FIGHTING GAME WORLD</h1>
       <div className={gameActive}>
         {gData}
       </div>
+      <Footer />
     </>
   )
 }
