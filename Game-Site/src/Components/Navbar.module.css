@@ -9,6 +9,7 @@ nav{
     align-items: center;
     padding: 0 20px;
     position: relative;
+    background-color: hsl(244, 100%, 20%)
 }
 
 .navLogo{
