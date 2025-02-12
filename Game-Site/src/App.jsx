@@ -5,6 +5,8 @@ import Footer from './Components/Footer.jsx';
 import Card from './card';
 import { Outlet, NavLink, Link} from 'react-router-dom';
 import gamedata from './gameData.js';
+import GamePage from './gamePage';
+
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
   const [xActive, setXActive] = useState(styles.xnone)
@@ -53,6 +55,7 @@ function App() {
       <div className={bodActive} >
         <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
         <Outlet context={{ gData }} />
+        {/* <GamePage/> */}
       </div>
       <h1 className={styles.catchy}>THE ONE STOP DESTINATION FOR THE CURRENT TITANS OF<br></br> THE FIGHTING GAME WORLD</h1>
       <div className={gameActive}>

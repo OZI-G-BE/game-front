@@ -16,6 +16,7 @@ import SG from './assets/sg.jpg';
 import KI from './assets/KI.jpg';
 import Injustice from './assets/injustice.jpg';
 import DS from './assets/DS.jpg';
+import PR from './assets/Pr.jpg';
 
 const gamesData = [
     {
@@ -198,6 +199,16 @@ const gamesData = [
         price: "$19.99",
         genre: "Fighting"
     },
+    {
+        title: "Power Rangers: BFTG",
+        description: "A 2D fighting game featuring characters from the Power Rangers franchise.",
+        longDescription: "Power Rangers: Battle for the Grid is a 2D fighting game that features characters from the Power Rangers franchise. The game offers a variety of modes, including a story mode, arcade mode, and online multiplayer. Players can choose from a roster of characters, each with their own unique abilities and playstyles. The game is known for its fast-paced combat and competitive gameplay.",
+        imagePath: PR,
+        developer: "nWay",
+        publisher: "nWay",
+        price: "$19.99",
+        genre: "Fighting"
+    }
 ];
 
 export default gamesData;
