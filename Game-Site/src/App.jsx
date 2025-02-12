@@ -9,6 +9,7 @@ function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
   const [xActive, setXActive] = useState(styles.xnone)
   const [bodActive, setBodActive] = useState(styles.xnone)
+  const [footActive, setFootActive] = useState(styles.foot)
  
 
   function gameShow(){
@@ -16,12 +17,14 @@ function App() {
       setGameActive(styles.gridnone);
       setXActive(styles.closeButton);
       setBodActive(styles.outletContainer);
+      setFootActive(styles.footnone);
     
     }
     else{
       setGameActive(styles.gridContainer);
       setXActive(styles.xnone);
       setBodActive(styles.xnone);
+      setFootActive(styles.foot);
       
     }
   }
@@ -55,7 +58,10 @@ function App() {
       <div className={gameActive}>
         {gData}
       </div>
+
+      <div className={footActive}>
       <Footer />
+      </div>
     </>
   )
 }
