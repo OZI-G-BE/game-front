@@ -13,6 +13,7 @@
   padding-left: auto;
   justify-content: center;
   place-items: center;
+  /* animation: fadeOutDownbtn 0.5s ease 0s 1 normal forwards; */
 }
 .closeButton {
   position: relative;
@@ -23,11 +24,15 @@
   padding: 1rem;
   cursor: pointer;
   opacity: 100%;
+  animation: fadeOutDownbtn 0.5s ease 0s 1 normal forwards;
 }
 .gridnone{
   animation: fadeOutDown 0.5s ease 0s 1 normal forwards;
 }
 
+.xnone{
+  display: none;
+}
 
 
 
@@ -41,7 +46,6 @@
   position: absolute;
   left: 25%;
   top: 25%;
-
 
 }
 
@@ -72,5 +76,18 @@ animation: fadeOutDown 1s ease 0s 1 normal forwards;
   padding-left: auto;
   justify-content: center;
   place-items: center;
+  }
+}
+@keyframes fadeOutDownbtn {
+  0% {
+    opacity: 0%;
+    transform: translateY(100%);
+    display: none;}
+  
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+    display: flex;
+  
   }
 }
