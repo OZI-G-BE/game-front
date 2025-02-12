@@ -7,16 +7,25 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: relative;
+}
+
+.navLogo{
+    background: #FFA31D;
+    background: linear-gradient(to right, #FFA31D 0%, #EF5454 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: skewX(20deg);
+    text-shadow: 6px 6px 0px rgba(239, 84, 84, 0.5);
 }
 
 .navLinks{
     display: flex;
     align-items: center;
-    /* width: 50%; */
     height: 100%;
 }
 
-.navLinks a{
+.navLinks a, .vertNavLinks a{
     display: inline-block;
     color: #fff;
     text-decoration: none;
@@ -24,10 +33,10 @@ nav{
     font-family: 'P-Medium', sans-serif;
     padding: 30px 20px;
     position: relative;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
 }
 
-.navLinks a::after{
+.navLinks a::after, .vertNavLinks a::after{
     content: '';
     position: absolute;
     bottom: -1px;
@@ -40,53 +49,65 @@ nav{
     transition: opacity 0.3s ease;
 }
 
-.navLinks a:hover::after{
+.navLinks a:hover::after, .vertNavLinks a:hover::after{
     opacity: 1;
 }
 
-.navLinks a:hover{
+.navLinks a:hover, .vertNavLinks a:hover{
     background-color: hsl(237, 100%, 5%);
-    box-shadow: 0 5px 10px 0 hsl(237, 100%, 75%);
+    box-shadow: 0 5px 10px 0 hsla(237, 100%, 75%, 0.5);
+}
+
+.vertNavLinks{
+    display: none;
 }
 
 .navBtn{
-    /* display: none; */
+
     padding: 15px;
     background-color: hsl(237, 100%, 5%);
     border: none;
     outline: none;
     border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.navBtn{
-    
+.navBtn:hover{
+    background-color: hsl(237, 100%, 10%);
+    box-shadow: 0 5px 10px 0 hsl(237, 100%, 75%);
+}
+
+.navOpenBtn, .navCloseBtn{
+    display: none;
 }
 
 
-/* @media screen and (max-width: 1024px){
-    header .nav-btn{
-        visibility: visible;
-        opacity: 1;
+@media screen and (max-width: 768px){
+    nav{
+        padding: 20px;
     }
 
-    header nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
+    .navOpenBtn{
+        display: block;
+    }
+
+    .navLinks{
+        display: none;
+    }
+
+    .vertNavLinks.responsiveNav{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        transition: 1s ease all;
-        transform: translateY(-100vh);
     }
 
-    header .responsive-nav{
-        transform: none;
+    .vertNavLinks{
+        flex-direction: column;
+        text-align: center;
+        display: none;
     }
 
-    
-    
-} */
+    .vertNavLinks a{
+        width: 100%;
+    }
+
+} 

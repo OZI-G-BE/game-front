@@ -1,32 +1,37 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from './Navbar.module.css';
 
 
 function Navbar(){
     const navRef = useRef();
+    const [isOpen, setIsOpen] = useState(false);
 
     const showNavbar = () => {
-        navRef.current.classList.toggle("reponsive_nav");
+        setIsOpen(!isOpen);
+        navRef.current.classList.toggle(styles.responsiveNav);
     }
 
     return(
         <header>
-            <nav ref={navRef}>
-                <h1>GAME_OVER</h1>
+            <nav>
+                <h1 className={styles.navLogo}>GAME_OVER</h1>
+                <button className={`${styles.navBtn} ${styles.navOpenBtn}`} onClick={showNavbar}>
+                    {isOpen ? <FaTimes /> : <FaBars />}
+                </button>
                 <div className={styles.navLinks}>
                     <a href="/">Home</a>
                     <a href="/">About Us</a>
                     <a href="/">Blog</a>
                     <a href="/">About Us</a>
-                    <button className={`${styles.navBtn} ${styles.navOpenBtn}`} onClick={showNavbar}>
-                        <FaBars />
-                    </button>
                 </div>
             </nav>
-            <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={showNavbar}>
-                <FaTimes />
-            </button>
+            <div ref={navRef} className={styles.vertNavLinks}>
+                    <a href="/">Home</a>
+                    <a href="/">About Us</a>
+                    <a href="/">Blog</a>
+                    <a href="/">About Us</a>
+                </div>
         </header>
     );
 }
