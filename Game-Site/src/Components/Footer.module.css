@@ -4,12 +4,13 @@ footer{
     width: 100%; 
     padding: 20px;
     background-color: hsl(244, 100%, 20%);
+    margin-top: 50px;
 }
 
 .footerContainer{
     width: max(800px, 90%);
-    grid-template-columns: 1fr 1fr 1fr;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-content: center;
     margin: 0 auto;
@@ -30,11 +31,22 @@ footer{
 }
 
 .footList li{
-    font-size: 1.2rem;
+    font-size: 1.02rem;
     font-family: 'P-Medium', sans-serif;
+}
+
+.footList li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footList li a{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .footnote{
     text-align: center;
+    align-items: center;
 }
 
