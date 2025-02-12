@@ -6,7 +6,7 @@ import { Outlet, NavLink, Link} from 'react-router-dom';
 import gamedata from './gameData.js';
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
-  const [xActive, setXActive] = useState(styles.gridnone)
+  const [xActive, setXActive] = useState(styles.xnone)
   // const [, setGData] = useState([])
 
 
@@ -18,19 +18,27 @@ function App() {
     }
     else{
       setGameActive(styles.gridContainer);
-      setXActive(styles.gridnone);
+      setXActive(styles.xnone);
     }
   }
   
   const gData = gamedata.map((game) => 
-    <div onClick={gameShow}>
-      <NavLink  to={`/gamePage/${game.title}`}>
-      <Card title={game.title} description={game.description} longDescription={game.longDescription} imageSrc={game.imagePath} >
-
-      </Card>
+    <div onClick={gameShow} key={game.title}>
+      <NavLink to={`/gamePage/${game.title}`}>
+        <Card 
+          title={game.title} 
+          description={game.description} 
+          longDescription={game.longDescription} 
+          imageSrc={game.imagePath} 
+          genre={game.genre}
+          price={game.price}
+          publisher={game.publisher}
+          developer={game.developer}
+          
+        />
       </NavLink>
     </div> 
-    );
+  );
     
     return (
       <>
