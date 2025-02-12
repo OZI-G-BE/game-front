@@ -4,8 +4,12 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer.jsx';
 import Card from './card';
 import { Outlet, NavLink, Link} from 'react-router-dom';
-import gamedata from './gameData.js';
+import {gamesData,slides} from './gameData.js';
 import GamePage from './gamePage';
+import { useEffect } from 'react';
+
+
+
 
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
@@ -13,6 +17,15 @@ function App() {
   const [bodActive, setBodActive] = useState(styles.xnone)
   const [footActive, setFootActive] = useState(styles.foot)
  
+const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  }, 3000);
+  return () => clearInterval(interval);
+}, []);
+
 
   function gameShow(){
     if (gameActive == styles.gridContainer){
@@ -31,7 +44,7 @@ function App() {
     }
   }
   
-  const gData = gamedata.map((game) => 
+  const gData = gamesData.map((game) => 
     <div onClick={gameShow} key={game.title}>
       <NavLink to={`/gamePage/${game.title}`}>
         <Card 
@@ -42,12 +55,13 @@ function App() {
           genre={game.genre}
           price={game.price}
           publisher={game.publisher}
-          developer={game.developer}
-          
+          developer={game.developer}    
         />
       </NavLink>
     </div> 
-  );
+
+);
+const slideData = slides.map((slide) => < img src={slide} key={slide}></img>);
     
     return (
       <>
@@ -58,6 +72,11 @@ function App() {
         {/* <GamePage/> */}
       </div>
       <h1 className={styles.catchy}>THE ONE STOP DESTINATION FOR THE CURRENT TITANS OF<br></br> THE FIGHTING GAME WORLD</h1>
+      <div className={styles.slideContainer}>
+        <div className={styles.imgContainer}>
+          {/* {slideData}  */}
+          </div>
+             </div>
       <div className={gameActive}>
         {gData}
       </div>

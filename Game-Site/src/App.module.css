@@ -57,13 +57,50 @@
 }
 
 .outletContainerOff {
-animation: fadeOutDown 1s ease 0s 1 normal forwards;
+  animation: fadeOutDown 1s ease 0s 1 normal forwards;
 }  
 .catchy{
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
 }
+
+
+.slideContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  max-width: 700px;
+  overflow: hidden;
+}
+.imgContainer{
+  animation: slideShow 10s ease-out 0.9s alternate-reverse infinite forwards;
+
+  transform: translateX(-30%);
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+}
+@keyframes slideShow {
+  0% {
+    transform: translateX(30%);
+  }
+ 
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+
+
+
 @keyframes fadeOutDown {
   0% {
     opacity: 100%;

@@ -18,7 +18,10 @@ import Injustice from './assets/injustice.jpg';
 import DS from './assets/DS.jpg';
 import PR from './assets/Pr.jpg';
 
-const gamesData = [
+import slide1 from './assets/slide/bftg slide.jpg';
+import slide2 from './assets/slide/GG slide.jpg';
+
+export const gamesData = [
     {
         title: "Guilty Gear Strive",
         description: "A fast-paced anime fighting game with unique characters and deep mechanics.",
@@ -211,4 +214,4 @@ const gamesData = [
     }
 ];
 
-export default gamesData;
+export const slides = [slide1, slide2];
