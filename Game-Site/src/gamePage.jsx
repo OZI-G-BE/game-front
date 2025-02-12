@@ -8,8 +8,6 @@ const { gData } = useOutletContext();
 const params = useParams();    
 const data = gData.map((game) => game.props.children.props);
 const realData = data.find((game) => game.children.props.title === params.title);
-
-console.log(realData)
 return (
     <>
         <div className={styles.gamePage}>
