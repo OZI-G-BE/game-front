@@ -5,7 +5,7 @@
   text-align: center;
 }
 .foot{
-  width: 100%;
+  max-width: 100%;
 }
 .footnone{
   display: none;
