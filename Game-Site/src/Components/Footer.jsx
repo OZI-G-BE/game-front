@@ -16,7 +16,7 @@ function Footer(){
                     <h3 className={styles.footHead}>Navigation</h3>
                     <ul className={styles.footList}>
                         <li><a href="">Home</a></li>
-                        <li>About Us</li>
+                        <li><a href="">About Us</a></li>
                     </ul>
                 </div>
                 <div className={styles.details}>
