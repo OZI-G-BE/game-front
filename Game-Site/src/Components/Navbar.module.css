@@ -16,6 +16,7 @@ nav{
     background: #FFA31D;
     background: linear-gradient(to right, #FFA31D 0%, #EF5454 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: skewX(20deg);
     text-shadow: 6px 6px 0px rgba(239, 84, 84, 0.5);
