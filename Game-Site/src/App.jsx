@@ -7,17 +7,20 @@ import gamedata from './gameData.js';
 function App() {
   const [gameActive, setGameActive] = useState(styles.gridContainer)
   const [xActive, setXActive] = useState(styles.xnone)
+  const [bodActive, setBodActive] = useState(styles.xnone)
  
 
   function gameShow(){
     if (gameActive == styles.gridContainer){
       setGameActive(styles.gridnone);
       setXActive(styles.closeButton);
+      setBodActive(styles.outletContainer);
     
     }
     else{
       setGameActive(styles.gridContainer);
       setXActive(styles.xnone);
+      setBodActive(styles.xnone);
       
     }
   }
@@ -43,7 +46,7 @@ function App() {
     return (
       <>
       <Navbar/>
-    <div className={styles.outletContainer} >
+    <div className={bodActive} >
     <Link to="/" className={xActive} onClick={gameShow}  >❌</Link>
       <Outlet context={{ gData }} />
       </div>
